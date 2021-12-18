@@ -1,0 +1,17 @@
+[Unit]
+Description=GoDaddy DDNS Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+WorkingDirectory=/etc/godaddy-ddns
+ExecStart=/usr/bin/bash /etc/godaddy-ddns/godaddy-ddns.bash /etc/godaddy-ddns/ddns.env
+KillMode=process
+Restart=on-failure
+User=nobody
+Group=nobody
+
+[Install]
+WantedBy=multi-user.target
