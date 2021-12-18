@@ -10,8 +10,6 @@ WorkingDirectory=/etc/godaddy-ddns
 ExecStart=/usr/bin/bash /etc/godaddy-ddns/godaddy-ddns.bash /etc/godaddy-ddns/ddns.env
 KillMode=process
 Restart=on-failure
-User=nobody
-Group=nobody
 
 [Install]
 WantedBy=multi-user.target

@@ -20,9 +20,11 @@ $(ETC_CONFIG):
 	echo "GODADDY_DDNS_DOMAIN=" >> $(ETC_CONFIG)
 	echo "GODADDY_DDNS_NAME=" >> $(ETC_CONFIG)
 	echo "GODADDY_DDNS_IPV6=" >> $(ETC_CONFIG)
+	chmod 600 $(ETC_CONFIG)
 
 $(USR_BIN_SCRIPT):
 	cp ./godaddy-ddns.bash $(USR_BIN_SCRIPT)
+	chmod 600 $(USR_BIN_SCRIPT)
 
 $(SYSTEMD_SERVICE):
 	cp ./godaddy-ddns.service $(SYSTEMD_SERVICE)
