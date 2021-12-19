@@ -8,7 +8,7 @@
 
 会自动创建默认配置模板和复制脚本到 /etc/godaddy-ddns
 
-编辑 cat /etc/godaddy-ddns/ddns.env 文件修改配置参数
+编辑 /etc/godaddy-ddns/ddns.env 文件修改配置参数
 
 # 参数
 
